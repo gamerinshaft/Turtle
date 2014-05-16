@@ -6,10 +6,11 @@ public class TurtleApplet extends Applet {
   Turtle kamekichi; // 「亀吉」用インスタンス変数の宣言
   public void init() {
     setBackground(Color.white); // アプレットの背景色を白に設定
-    kamekichi = new Turtle(200,100);	// 「亀吉」の生成
-    // triangles(kamekichi, 40, 2, 10); 三角形（その１）
-    // triangles(kamekichi, 40, 2, 20);  三角形（その2）
-    // square(kamekichi);	// 「亀吉」を正方形に動かす
+    kamekichi = new Turtle(200,100);  // 「亀吉」の生成
+    // triangles(kamekichi, 40, 2, 10); // 三角形（その１）
+    triangles(kamekichi, 40, 2, 20);  //三角形（その2）
+
+    //square(kamekichi);	// 「亀吉」を正方形に動かす
 
   }
 
@@ -31,8 +32,10 @@ public class TurtleApplet extends Applet {
   }
 
   void triangle(Turtle t, int size) {
+    t.penColor(Color.RED);
     t.move(size);
     t.turn(120);
+    t.penColor(Color.BLUE);
     t.move(size);
     t.turn(120);
     t.move(size);
