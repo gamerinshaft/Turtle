@@ -6,12 +6,24 @@ public class TurtleApplet extends Applet {
   Turtle kamekichi; // 「亀吉」用インスタンス変数の宣言
   public void init() {
     setBackground(Color.white); // アプレットの背景色を白に設定
-    kamekichi = new Turtle(200,100);  // 「亀吉」の生成
+    kamekichi = new Turtle(200,200);  // 「亀吉」の生成
     // triangles(kamekichi, 40, 2, 10); // 三角形（その１）
-    triangles(kamekichi, 40, 2, 20);  //三角形（その2）
-
+    // triangles(kamekichi, 40, 2, 20);  //三角形（その2）
+    cabbage(kamekichi);
     //square(kamekichi);	// 「亀吉」を正方形に動かす
 
+  }
+
+  void cabbage(Turtle t){
+    int i,j;
+    for (i = 3; i <= 10; i++) {
+      j = 0;
+      while(i > j){
+        t.move(50);
+        t.turn(360.0/i);
+        j++;
+      }
+    }
   }
 
   void square(Turtle t) {

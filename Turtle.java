@@ -28,6 +28,7 @@ public class Turtle {
     //向きを変える処理
   }
   public void penSize(int size){
+
   }
   public void penColor(Color c){
     color = c;
